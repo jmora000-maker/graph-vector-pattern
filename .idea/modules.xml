@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/schedule-risk-detector.iml" filepath="$PROJECT_DIR$/.idea/schedule-risk-detector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/graph-vector-pattern.iml" filepath="$PROJECT_DIR$/.idea/graph-vector-pattern.iml" />
     </modules>
   </component>
 </project>

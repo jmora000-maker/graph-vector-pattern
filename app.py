@@ -1,87 +1,92 @@
-# Streamlit UI layer
-import sys
-from pathlib import Path
-import contextlib
+import pandas as pd
 import streamlit as st
-
-# Add the project root to sys.path
-sys.path.append(str(Path(__file__).resolve().parent))
-
-# Import your pipeline
-from src.inputs import initialize_environment, populate_sample_data, DATA_FOLDER
+import contextlib
+from src.config import data_folder, stakeholder_register_path, stakeholder_plan_path, meeting_notes_path
 from src.pipeline import run_automated_pipeline
+from src.utils import StreamlitStdoutRedirector
 
-# --- UI CONFIGURATION ---
+
+# --- STREAMLIT DASHBOARD INTERFACE ---
 st.set_page_config(page_title="AI Stakeholder Alignment", layout="wide")
+st.title("Stakeholder Alignment Dashboard")
+st.caption("Real-time diagnostics to bridge the gap between project strategy and operational delivery.")
+st.markdown("---")
 
+col1, col2 = st.columns(2)
 
-# --- UI LOGIC ---
-class StreamlitStdoutRedirector:
-    """Redirects stdout to a Streamlit code block for real-time logging."""
+with col1:
+    st.subheader("System Configuration")
 
-    def __init__(self, placeholder):
-        self.placeholder = placeholder
-        self.output_str = ""
+    # --- 2. Hardcoded File Loading Logic ---
+    # Check if the data folder exists
+    if data_folder.exists():
 
-    def write(self, text):
-        self.output_str += str(text)
-        self.placeholder.code(self.output_str[-8000:], language="text")
+        st.text(f"Files found in '{data_folder.name}'")
+        # iterdir() yields Path objects; we grab .name for just the filename
+        files = [f.name for f in data_folder.iterdir()]
+        st.write(files)
 
-    def flush(self):
-        pass
+        # Verify the specific files exist before trying to read them
+        if stakeholder_register_path.exists():
+            # Read the CSV directly into a DataFrame
+            df_register = pd.read_csv(stakeholder_register_path)
+            # You can now use df_register throughout your app
+        else:
+            st.error(f"Missing file: {stakeholder_register_path.name}")
 
+        if stakeholder_plan_path.exists():
+            plan_content = stakeholder_plan_path.read_text(encoding="utf-8")
 
-def main():
-    st.title("Stakeholder Alignment Dashboard")
-    st.caption("Real-time diagnostics to bridge the gap between strategy and delivery.")
-    st.markdown("---")
+        if meeting_notes_path.exists():
+            notes_content = meeting_notes_path.read_text(encoding="utf-8")
+    else:
+        st.error(f"Data directory '{data_folder}' does not exist. Please create it and add your files.")
 
-    # Ensure environment is ready
-    initialize_environment()
-    populate_sample_data()
+    start_pipeline = st.button("Execute Stakeholder Alignment Pipeline", use_container_width=True, type="primary")
 
-    col1, col2 = st.columns(2)
+    st.subheader("Pipeline Summary")
+    console_logs = st.empty()
+    console_logs.info("Click 'Execute Stakeholder Alignment Pipeline' button to begin.")
 
-    with col1:
-        st.subheader("System Configuration")
-        st.info(f"Data directory initialized at: `{DATA_FOLDER}`")
+with col2:
+    st.subheader("Report Workspace")
+    report_placeholder = st.empty()
+    report_placeholder.info("The Stakeholder Alignment Report will populate here upon synthesis.")
 
-        start_pipeline = st.button("Execute Stakeholder Alignment Pipeline", type="primary", use_container_width=True)
+    if start_pipeline:
+        console_logs.empty()
+        redirector = StreamlitStdoutRedirector(console_logs)
+        redirector.reset()
 
-        st.subheader("Pipeline Logs")
-        console_logs = st.empty()
+        with st.spinner("Processing Stakeholder Alignment Pipeline..."):
+            with contextlib.redirect_stdout(redirector):
+                final_narrative = run_automated_pipeline()
 
-    with col2:
-        st.subheader("Report Workspace")
-        report_placeholder = st.empty()
-        report_placeholder.info("Click 'Execute' to generate the report.")
+        if final_narrative:
+            with report_placeholder.container():
+                st.html(
+                    f"""
+                                <div style="
+                                    background-color: #1e293b; 
+                                    color: #f8fafc; 
+                                    padding: 20px; 
+                                    border-radius: 8px; 
+                                    height: 550px; 
+                                    overflow-y: scroll; 
+                                    white-space: pre-wrap; 
+                                    font-family: inherit;
+                                    border: 1px solid #334155;
+                                    line-height: 1.5;
+                                ">
+                                    <p style="font-size: 16px !important; margin: 0; padding: 0;">{final_narrative}</p>
+                                </div>
+                                """
+                )
 
-        if start_pipeline:
-            console_logs.info("Starting pipeline...")
-            redirector = StreamlitStdoutRedirector(console_logs)
-
-            with st.spinner("Processing..."):
-                with contextlib.redirect_stdout(redirector):
-                    # Call the stable pipeline
-                    findings = run_automated_pipeline()
-
-                    # Convert findings to a string narrative
-                    final_narrative = "\n".join([f"{f.finding_id}: {f.observed_gap}" for f in findings])
-                    if not findings:
-                        final_narrative = "Audit complete: No strategic gaps detected."
-
-            # Display final report
-            report_placeholder.markdown("### Latest Report")
-            report_placeholder.text_area("Report Content", final_narrative, height=500)
-
-            st.download_button(
-                label="Download Report (.txt)",
-                data=final_narrative,
-                file_name="stakeholder_alignment_report.txt",
-                mime="text/plain",
-                use_container_width=True
-            )
-
-
-if __name__ == "__main__":
-    main()
+                st.download_button(
+                    label="Download Stakeholder Alignment Report (.txt)",
+                    data=final_narrative,
+                    file_name="stakeholder_alignment_report.txt",
+                    mime="text/plain",
+                    use_container_width=True
+                )

@@ -1,17 +1,17 @@
-from src.config import STAKEHOLDER_GAP_REPORT_PATH
+from src.config import stakeholder_gap_report_path, today
 from src.models import ExecutiveStakeholderGapReport
-from datetime import date
 
+def generate_executive_summary(structured_report: ExecutiveStakeholderGapReport) -> str:
+    print(f" -> Re-applying structure and saving report to disk.")
 
-def generate_formatted_report(structured_report: ExecutiveStakeholderGapReport) -> str:
-    """Converts the structured object into a human-readable string and saves to disk."""
-    today = date.today().strftime("%B %d, %Y")
+    # Correctly access 'findings' instead of 'categories'
+    total_findings = len(structured_report.findings)
 
     lines = [
         "================================================================================",
         "STAKEHOLDER ALIGNMENT REPORT",
         f"Report Date: {today}",
-        f"Summary: Verified {len(structured_report.findings)} stakeholder alignment findings.",
+        f"Summary: Verified {total_findings} stakeholder alignment findings.",
         "================================================================================",
         "",
         "EXECUTIVE SUMMARY:",
@@ -21,6 +21,7 @@ def generate_formatted_report(structured_report: ExecutiveStakeholderGapReport) 
         ""
     ]
 
+    # Iterate over 'findings'
     for finding in structured_report.findings:
         lines.append(f"{finding.gap_category}:")
         lines.append(f"Stakeholder: {finding.stakeholder_name}")
@@ -30,8 +31,6 @@ def generate_formatted_report(structured_report: ExecutiveStakeholderGapReport) 
         lines.append("")
 
     final_report_text = "\n".join(lines)
-
-    # Save to disk
-    STAKEHOLDER_GAP_REPORT_PATH.write_text(final_report_text, encoding="utf-8")
+    stakeholder_gap_report_path.write_text(final_report_text, encoding="utf-8")
 
     return final_report_text
