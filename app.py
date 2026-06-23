@@ -2,14 +2,12 @@
 import sys
 from pathlib import Path
 import contextlib
-
-# Add the project root to sys.path
-# This makes 'src' a top-level package
-sys.path.append(str(Path(__file__).resolve().parent))
-
 import streamlit as st
 
-# Import directly from the files inside src, NEVER from 'src' directly
+# Add the project root to sys.path
+sys.path.append(str(Path(__file__).resolve().parent))
+
+# Import your pipeline
 from src.inputs import initialize_environment, populate_sample_data, DATA_FOLDER
 from src.pipeline import run_automated_pipeline
 
@@ -64,7 +62,13 @@ def main():
 
             with st.spinner("Processing..."):
                 with contextlib.redirect_stdout(redirector):
-                    final_narrative = run_automated_pipeline()
+                    # Call the stable pipeline
+                    findings = run_automated_pipeline()
+
+                    # Convert findings to a string narrative
+                    final_narrative = "\n".join([f"{f.finding_id}: {f.observed_gap}" for f in findings])
+                    if not findings:
+                        final_narrative = "Audit complete: No strategic gaps detected."
 
             # Display final report
             report_placeholder.markdown("### Latest Report")

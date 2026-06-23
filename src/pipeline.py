@@ -1,37 +1,25 @@
 # Orchestration logic (run_automated_pipeline)
-
 from src.knowledge import StructuredProjectContext, CorporateTaxonomyNormalizer
-from src.rag import SimpleVectorStore
-from src.rules import GapDetector
-from src.llm import synthesize_report_with_llm
-from src.report import generate_formatted_report
-from src.config import DATABASE_FILE_DESTINATION
+from src.rules import AuditDetector
 
 
-def run_automated_pipeline() -> str:
-    # 1. Initialize
+def run_automated_pipeline():
+    """
+    Orchestrates the end-to-end data ingestion, structuring, and audit process.
+    """
+    # 1. Initialize the normalization utility
     normalizer = CorporateTaxonomyNormalizer()
-    context = StructuredProjectContext(normalizer=normalizer)
-    store = SimpleVectorStore()
 
-    # 2. Data Ingestion & Indexing
+    # 2. Initialize the project context (data layer)
+    # Note: Pydantic models initialize empty lists by default
+    context = StructuredProjectContext()
+
+    # 3. Ingest raw data from your inputs layer
     context.ingest_data()
-    if DATABASE_FILE_DESTINATION.exists():
-        store.load(DATABASE_FILE_DESTINATION)
-    else:
-        store.build_indices(context.raw_chunks)
-        store.save(DATABASE_FILE_DESTINATION)
 
-    # 3. Audit
-    detector = GapDetector(context, store, normalizer)
+    # 4. Run automated audit checks
+    detector = AuditDetector(context, normalizer)
     internal_findings = detector.execute_audit_checks()
-    heatmap = detector.generate_strategic_heatmap()
 
-    # 4. Synthesis & Reporting
-    raw_payload = {
-        "findings": [f.model_dump() for f in internal_findings],
-        "strategic_heatmap": heatmap
-    }
-    structured_report = synthesize_report_with_llm(raw_payload)
-
-    return generate_formatted_report(structured_report)
+    # 5. Return the findings for UI rendering
+    return internal_findings
