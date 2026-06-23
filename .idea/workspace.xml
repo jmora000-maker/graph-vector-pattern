@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AIDiffSettings">
+    <option name="showAIDiff" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5df93035-19b1-4073-824e-7c071c40c791" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/schedule-risk-detector.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/graph-vector-pattern.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/STAKEHOLDER_GAP_REPORT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/knowledge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/llm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rules.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_store/global_vector_store.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="26" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jmora000-maker&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jmora000-maker/schedule-risk-detector.git&quot;,
+    &quot;accountId&quot;: &quot;43314216-3120-499d-b2cf-ae96cad67a30&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.8692048792460132" />
+      <entry key="MS500" value="3.9789454063521155" />
+      <entry key="S2" value="10.275343982547767" />
+      <entry key="S5" value="14.533608720895929" />
+      <entry key="S10" value="16.55607332927734" />
+      <entry key="S30" value="18.17173319596144" />
+      <entry key="S60" value="19.827524438998587" />
+      <entry key="M2" value="26.059263432030892" />
+      <entry key="M5" value="39.73537309784059" />
+      <entry key="M10" value="48.52649222901045" />
+      <entry key="M15" value="52.20951796184619" />
+      <entry key="M30" value="56.34843034052327" />
+      <entry key="H1" value="58.60631794891396" />
+      <entry key="H2" value="59.78568288804557" />
+      <entry key="H4" value="60.38840807400844" />
+      <entry key="D1" value="60.89744672750595" />
+      <entry key="W1" value="60.98533424460773" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.8094354472282195" />
+      <entry key="MS500" value="3.949544866002995" />
+      <entry key="S2" value="10.255025538889424" />
+      <entry key="S5" value="14.522002076332395" />
+      <entry key="S10" value="16.54944501230151" />
+      <entry key="S30" value="18.169298129323025" />
+      <entry key="S60" value="19.826089001906038" />
+      <entry key="M2" value="26.058060727580656" />
+      <entry key="M5" value="39.734450441115506" />
+      <entry key="M10" value="48.525886975647815" />
+      <entry key="M15" value="52.20907406927399" />
+      <entry key="M30" value="56.34818564373203" />
+      <entry key="H1" value="58.606189383800455" />
+      <entry key="H2" value="59.78561698042831" />
+      <entry key="H4" value="60.388374704761006" />
+      <entry key="D1" value="60.89744110747125" />
+      <entry key="W1" value="60.98533344030269" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3FXwZ8j0z0q7pYkNzChl7fvz53c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.app.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5df93035-19b1-4073-824e-7c071c40c791" name="Changes" comment="" />
+      <created>1782234776237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782234776237</updated>
+      <workItem from="1782234777889" duration="682000" />
+      <workItem from="1782235490703" duration="379000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/graph_vector_pattern$app.coverage" NAME="app Coverage Results" MODIFIED="1782234825991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

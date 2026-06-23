@@ -1,0 +1,414 @@
+{
+  "nodes": [
+    {
+      "id": "STK-MARIA-CHEN",
+      "type": "stakeholder",
+      "name": "Maria Chen",
+      "influence": "High"
+    },
+    {
+      "id": "STK-DAVID-OKAFOR",
+      "type": "stakeholder",
+      "name": "David Okafor",
+      "influence": "High"
+    },
+    {
+      "id": "STK-PRIYA-NAIR",
+      "type": "stakeholder",
+      "name": "Priya Nair",
+      "influence": "High"
+    },
+    {
+      "id": "STK-HELEN-BROOKS",
+      "type": "stakeholder",
+      "name": "Helen Brooks",
+      "influence": "High"
+    },
+    {
+      "id": "STK-JONAS-WEBER",
+      "type": "stakeholder",
+      "name": "Jonas Weber",
+      "influence": "Medium"
+    },
+    {
+      "id": "STK-FATIMA-HASSAN",
+      "type": "stakeholder",
+      "name": "Fatima Hassan",
+      "influence": "Medium"
+    },
+    {
+      "id": "STK-MARCUS-THORNE",
+      "type": "stakeholder",
+      "name": "Marcus Thorne",
+      "influence": "High"
+    },
+    {
+      "id": "STK-ELENA-ROSSI",
+      "type": "stakeholder",
+      "name": "Elena Rossi",
+      "influence": "Medium"
+    },
+    {
+      "id": "act-0",
+      "type": "action",
+      "strategy": "Engagement approach: Manage closely.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-1",
+      "type": "action",
+      "strategy": "Weekly steering committee update with progress, milestones, and delivery risks.",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-2",
+      "type": "action",
+      "strategy": "Monthly budget review.",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-3",
+      "type": "action",
+      "strategy": "Escalation path for critical delivery blockers.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-4",
+      "type": "action",
+      "strategy": "Continued sponsorship and rapid decisionmaking support.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-5",
+      "type": "action",
+      "strategy": "Engagement approach: Manage closely.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-6",
+      "type": "action",
+      "strategy": "Biweekly operations working session.",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-7",
+      "type": "action",
+      "strategy": "Review rollout impacts before release.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-8",
+      "type": "action",
+      "strategy": "Share deployment checklist one week before golive.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-9",
+      "type": "action",
+      "strategy": "Operational readiness and low disruption during rollout.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-10",
+      "type": "action",
+      "strategy": "Engagement approach: Keep satisfied.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-11",
+      "type": "action",
+      "strategy": "Monthly security review meeting.",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-12",
+      "type": "action",
+      "strategy": "Share architecture summary before production deployment.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-13",
+      "type": "action",
+      "strategy": "Security approval before release.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-14",
+      "type": "action",
+      "strategy": "Engagement approach: Keep informed.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-15",
+      "type": "action",
+      "strategy": "Weekly change and communications sync.",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-16",
+      "type": "action",
+      "strategy": "Prepare adoption messaging for impacted teams.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-17",
+      "type": "action",
+      "strategy": "Track training completion metrics.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-18",
+      "type": "action",
+      "strategy": "Smooth adoption and clear stakeholder communication.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-19",
+      "type": "action",
+      "strategy": "Engagement approach: Keep informed.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-20",
+      "type": "action",
+      "strategy": "Biweekly support readiness review.",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-21",
+      "type": "action",
+      "strategy": "Share knowledge base updates for support agents.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-22",
+      "type": "action",
+      "strategy": "Support team prepared for user questions after launch.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-23",
+      "type": "action",
+      "strategy": "Steering committee: Weekly",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-24",
+      "type": "action",
+      "strategy": "Operations sync: Biweekly",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-25",
+      "type": "action",
+      "strategy": "Security review: Monthly",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-26",
+      "type": "action",
+      "strategy": "Change forum: Weekly",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-27",
+      "type": "action",
+      "strategy": "Support review: Biweekly",
+      "has_owner": false,
+      "has_cadence": true
+    },
+    {
+      "id": "act-28",
+      "type": "action",
+      "strategy": "Compliance engagement will be handled through existing governance channels.",
+      "has_owner": false,
+      "has_cadence": false
+    },
+    {
+      "id": "act-29",
+      "type": "action",
+      "strategy": "Additional stakeholders may be added later if they become relevant.",
+      "has_owner": false,
+      "has_cadence": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "STK-MARIA-CHEN",
+      "to": "act-0",
+      "type": "owns"
+    },
+    {
+      "from": "STK-MARIA-CHEN",
+      "to": "act-1",
+      "type": "owns"
+    },
+    {
+      "from": "STK-MARIA-CHEN",
+      "to": "act-2",
+      "type": "owns"
+    },
+    {
+      "from": "STK-MARIA-CHEN",
+      "to": "act-3",
+      "type": "owns"
+    },
+    {
+      "from": "STK-MARIA-CHEN",
+      "to": "act-4",
+      "type": "owns"
+    },
+    {
+      "from": "STK-DAVID-OKAFOR",
+      "to": "act-5",
+      "type": "owns"
+    },
+    {
+      "from": "STK-DAVID-OKAFOR",
+      "to": "act-6",
+      "type": "owns"
+    },
+    {
+      "from": "STK-DAVID-OKAFOR",
+      "to": "act-7",
+      "type": "owns"
+    },
+    {
+      "from": "STK-DAVID-OKAFOR",
+      "to": "act-8",
+      "type": "owns"
+    },
+    {
+      "from": "STK-DAVID-OKAFOR",
+      "to": "act-9",
+      "type": "owns"
+    },
+    {
+      "from": "STK-PRIYA-NAIR",
+      "to": "act-10",
+      "type": "owns"
+    },
+    {
+      "from": "STK-PRIYA-NAIR",
+      "to": "act-11",
+      "type": "owns"
+    },
+    {
+      "from": "STK-PRIYA-NAIR",
+      "to": "act-12",
+      "type": "owns"
+    },
+    {
+      "from": "STK-PRIYA-NAIR",
+      "to": "act-13",
+      "type": "owns"
+    },
+    {
+      "from": "STK-JONAS-WEBER",
+      "to": "act-14",
+      "type": "owns"
+    },
+    {
+      "from": "STK-JONAS-WEBER",
+      "to": "act-15",
+      "type": "owns"
+    },
+    {
+      "from": "STK-JONAS-WEBER",
+      "to": "act-16",
+      "type": "owns"
+    },
+    {
+      "from": "STK-JONAS-WEBER",
+      "to": "act-17",
+      "type": "owns"
+    },
+    {
+      "from": "STK-JONAS-WEBER",
+      "to": "act-18",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-19",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-20",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-21",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-22",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-23",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-24",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-25",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-26",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-27",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-28",
+      "type": "owns"
+    },
+    {
+      "from": "STK-FATIMA-HASSAN",
+      "to": "act-29",
+      "type": "owns"
+    }
+  ]
+}
