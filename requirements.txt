@@ -1,0 +1,14 @@
+# --- Core Application ---
+streamlit
+
+# --- Data Processing & Logic ---
+pandas
+numpy
+pydantic
+
+# --- AI & Integration ---
+openai
+
+# --- Environment & Utils ---
+python-dotenv
+pathlib
