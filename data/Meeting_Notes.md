@@ -1,0 +1,3 @@
+# Project Sync Notes
+Date: June 15, 2026
+...
